@@ -1,0 +1,23 @@
+# 源代码和测试文件
+src/
+
+# 配置文件
+.gitignore
+.npmignore
+vite.config.js
+pnpm-lock.yaml
+
+# IDE 和编辑器文件
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# 其他开发相关文件
+node_modules/
+coverage/
+.history/
