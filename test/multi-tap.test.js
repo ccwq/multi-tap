@@ -7,9 +7,9 @@ describe('MultiTap', () => {
   beforeEach(() => {
     consoleSpy = jest.spyOn(console, 'log').mockImplementation();
     multiTap = new MultiTap([
-      (count) => console.log(`检测到单击调用，共调用 ${count} 次`),
-      (count) => console.log(`检测到双击调用，共调用 ${count} 次`),
-      (count) => console.log(`检测到三击调用，共调用 ${count} 次`)
+      (data, count) => console.log(`检测到单击调用，共调用 ${count} 次`),
+      (data, count) => console.log(`检测到双击调用，共调用 ${count} 次`),
+      (data, count) => console.log(`检测到三击调用，共调用 ${count} 次`)
     ]);
   });
 

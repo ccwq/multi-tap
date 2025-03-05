@@ -12,9 +12,7 @@
       "types": "./dist/multi-tap.d.ts"
     }
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "test": "jest",
     "build": "vite build",

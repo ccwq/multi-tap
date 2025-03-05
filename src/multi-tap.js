@@ -58,7 +58,7 @@ class MultiTap {
      *    - 否则，使用 handlers 数组中的最后一个处理函数作为默认（也适用于超过已设定的次数）。
      * 4. 执行完成后，重置计数器和计时器。
      */
-    trigger() {
+    trigger(data) {
       this.count++;
       if (this.timer) {
         clearTimeout(this.timer);
@@ -67,7 +67,7 @@ class MultiTap {
         const index = this.count - 1; // 数组索引从0开始
         // 如果没有对应的 handler，则使用最后一个 handler 做为默认行为
         const handler = this.handlers[index] || this.handlers[this.handlers.length - 1];
-        handler(this.count);
+        handler(data, this.count);
         // 重置计数器和定时器
         this.count = 0;
         this.timer = null;

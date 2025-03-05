@@ -43,15 +43,16 @@ import { MultiTap } from 'ioto-multi-tap';
 // 创建实例并设置处理函数
 const multiTap = new MultiTap([
   // 单击处理函数
-  count => console.log(`单击：${count} 次`),
+  (data, count) => console.log(`单击：${count} 次，数据：`, data),
   // 双击处理函数
-  count => console.log(`双击：${count} 次`),
+  (data, count) => console.log(`双击：${count} 次，数据：`, data),
   // 三击处理函数（可选）
-  count => console.log(`三击：${count} 次`)
+  (data, count) => console.log(`三击：${count} 次，数据：`, data)
 ]);
 
-// 在需要的地方调用 trigger 方法
-multiTap.trigger();
+// 在需要的地方调用 trigger 方法，可以传入任意数据
+const data = { value: 'test' };
+multiTap.trigger(data);
 ```
 
 ### CommonJS 模块导入
@@ -61,11 +62,11 @@ const { MultiTap } = require('ioto-multi-tap');
 // 创建实例并设置处理函数
 const multiTap = new MultiTap([
   // 单击处理函数
-  count => console.log(`单击：${count} 次`),
+  (data, count) => console.log(`单击：${count} 次，数据：`, data),
   // 双击处理函数
-  count => console.log(`双击：${count} 次`),
+  (data, count) => console.log(`双击：${count} 次，数据：`, data),
   // 三击处理函数（可选）
-  count => console.log(`三击：${count} 次`)
+  (data, count) => console.log(`三击：${count} 次，数据：`, data)
 ]);
 ```
 
