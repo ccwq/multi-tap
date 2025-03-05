@@ -1,6 +1,6 @@
 {
   "name": "ioto-multi-tap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "一个用于处理短时间内连续触发调用的 JavaScript 工具类",
   "main": "dist/multi-tap.js",
   "module": "dist/multi-tap.mjs",
@@ -12,7 +12,9 @@
       "types": "./dist/multi-tap.d.ts"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "jest",
     "build": "vite build",
