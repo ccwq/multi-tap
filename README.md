@@ -12,33 +12,33 @@
 
 ### NPM
 ```bash
-npm install multi-tap
+npm install ioto-multi-tap
 ```
 
 ### PNPM
 ```bash
-pnpm add multi-tap
+pnpm add ioto-multi-tap
 ```
 
 ### YARN
 ```bash
-yarn add multi-tap
+yarn add ioto-multi-tap
 ```
 
 ### 直接引入
 
-将 `src/multi-tap.js` 文件加入到你的项目中即可。  
+将 `src/ioto-multi-tap.js` 文件加入到你的项目中即可。  
 例如，你可以直接在 HTML 中通过 `<script>` 标签引入：
 
 ```html
-<script src="path/to/multi-tap.js"></script>
+<script src="path/to/ioto-multi-tap.js"></script>
 ```
 
 ## 使用方法
 
 ### ESM 模块导入
 ```javascript
-import { MultiTap } from 'multi-tap';
+import { MultiTap } from 'ioto-multi-tap';
 
 // 创建实例并设置处理函数
 const multiTap = new MultiTap([
@@ -56,7 +56,7 @@ multiTap.trigger();
 
 ### CommonJS 模块导入
 ```javascript
-const { MultiTap } = require('multi-tap');
+const { MultiTap } = require('ioto-multi-tap');
 
 // 创建实例并设置处理函数
 const multiTap = new MultiTap([
